@@ -4,8 +4,9 @@ export enum ActionTypes {
   ERROR = 'ERROR'
 }
 
-export const fetchAction = () : IAction  => ({
-  type: ActionTypes.FETCHING
+export const fetchAction = (searchString?:string) : IAction  => ({
+  type: ActionTypes.FETCHING,
+  searchString
 })
 
 export const fetchFinishedAction = (payload:any) :IAction => ({
@@ -19,5 +20,6 @@ export const fetchErrorAction = () : IAction => ({
 
 export interface IAction {
   type:ActionTypes
+  searchString?: string
   payload?: any
 }
