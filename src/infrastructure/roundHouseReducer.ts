@@ -18,7 +18,7 @@ export function roundHouseReducer(state: IState = initState, action: IAction) {
   }
 }
 
-interface IState {
+export interface IState {
   loading: boolean;
   chuckJoke?: string;
 }

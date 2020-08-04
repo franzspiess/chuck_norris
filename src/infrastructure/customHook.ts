@@ -1,5 +1,6 @@
-import {useReducer} from 'react'
-import { roundHouseReducer, initState } from './roundHouseReducer'
+import {useReducer, useCallback} from 'react'
+import { roundHouseReducer, initState, IState } from './roundHouseReducer'
+import { fetchAction, fetchFinishedAction } from './martialActions'
 
 const apiRoutes = {
   baseUrl:'https://api.chucknorris.io/jokes',
@@ -7,20 +8,17 @@ const apiRoutes = {
   appendSearchString: '/search?query='
 }
 
-export function useFetchChuck () {
+export default function useFetchChuck () :
+[IState, (searchString:string) => void] {
   const [state, dispatch] = useReducer(roundHouseReducer, initState)
-
-  function fetchChuck (searchString: string) {
-
+  const fetchChuck = useCallback((searchString: string) => {
     const route = getRoute (searchString)
+    fetch(route)
+      .then(console.log)
+      .then(data => dispatch(fetchFinishedAction(data)))
+  }, [])
 
-
-
-
-
-  }
-
-  return [state, dispatch]
+  return [state, fetchChuck]
 }
 
 function getRoute (searchString:string) {
