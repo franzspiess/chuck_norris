@@ -23,8 +23,8 @@ code {
 .box {
   background-color: red;
   border-radius: 3%;
-  grid-column: 1/13;
-  grid-row:1/12;
+  grid-column: 1/21;
+  grid-row:1/13;
 }
 
 @media screen and (min-width: 800px) {

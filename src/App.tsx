@@ -1,16 +1,18 @@
 import React from 'react'
 import './App.css'
 import useFetchChuck from './infrastructure/customHook'
+import Container from './components/Container'
+import Box from './components/Box'
 
 function App() {
   const [state, fetchChuck] = useFetchChuck()
   return (
-    <div className="container">
-      <div className='box' />
-      <button
-        onClick={() => fetchChuck('')}
-        >TEST</button>
-    </div>
+    <Container>
+      <Box
+        state={state}
+        fetchChuck={fetchChuck}
+        />
+    </Container >
   );
 }
 
