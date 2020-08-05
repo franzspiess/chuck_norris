@@ -1,8 +1,8 @@
 import React from 'react'
 import './App.css'
 import useFetchChuck from './infrastructure/customHook'
-import Container from './components/Container'
-import Box from './components/Box'
+import Container from './components/containers/Container'
+import Box from './components/containers/Box'
 
 function App() {
   const [state, fetchChuck] = useFetchChuck()
