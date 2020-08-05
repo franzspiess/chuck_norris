@@ -14,12 +14,14 @@ export const fetchFinishedAction = (payload:any) :IAction => ({
   payload
 })
 
-export const fetchErrorAction = () : IAction => ({
-  type: ActionTypes.ERROR
+export const fetchErrorAction = (message:string) : IAction => ({
+  type: ActionTypes.ERROR,
+  message
 })
 
 export interface IAction {
   type:ActionTypes
   searchString?: string
-  payload?: any
+  payload?: string
+  message?: string
 }
