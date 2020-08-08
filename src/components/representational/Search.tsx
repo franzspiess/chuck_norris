@@ -16,6 +16,7 @@ export default function Search ({
       <input
         value={searchString}
         onChange={handleChange}
+        autoFocus
       />
       <button
         onClick={() => {

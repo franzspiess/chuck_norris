@@ -8,7 +8,7 @@ export default function FactDisplay ({
   }) {
     return (
       <div>
-        <p>{chuckJoke}</p>
+        <p id='chuck-joke'>{chuckJoke}</p>
       </div>
     )
 }

@@ -21,9 +21,9 @@ code {
   background-image: url('./1118491.jpg')
 }
 .box {
-  padding: 5%;
+  padding: 12%;
   font-weight: bold;
-  background-color: red;
+  background-color: #DCDCDC;
   grid-column: 1/25;
   grid-row:1/13;
   display:flex;
