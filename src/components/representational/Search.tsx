@@ -1,6 +1,8 @@
 import React from 'react'
 import {IBoxProps} from '../containers/Box'
 
+// Input and button to initialize network request
+// Stores value in useState hook and resets upon fetch
 
 export default function Search ({
   fetchChuck

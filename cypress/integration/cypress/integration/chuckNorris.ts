@@ -1,8 +1,8 @@
 describe('Testing the Chuck Norris App', () => {
 
-  cy.visit('http://localhost:3000');
-
   it('renders the page', () => {
+    cy.visit('https://franzspiess.github.io/chuck_norris');
+
     cy.get('.box').should('exist');
     cy.get('.container').should('exist');
     cy.get('.search-box').should('exist');

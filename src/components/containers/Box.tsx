@@ -12,15 +12,15 @@ export default function Box({
   },
   fetchChuck
 }: IBoxProps) {
+
+  // determines whether to show loading spinner, error message or joke, depending on state
   function determineRender () {
     if (loading) return (<Loader />)
     if (errorMessage) return (<ErrorDisplay  errorMessage={errorMessage}/>)
     return (<FactHandler chuckJoke={chuckJoke} fetchChuck={fetchChuck} />)
   }
   return (
-    <div className="box" style={{
-      justifyContent: loading ? 'center' : 'space-evenly'
-    }}>
+    <div className="box" >
       {determineRender()}
     </div>
   )

@@ -1,5 +1,8 @@
 import { IAction, ActionTypes } from './martialActions';
 
+// Stores the joke and component state (loading, error)
+// Initialized with prompt to use the button
+
 export const initState: IState = {
   loading: false,
   chuckJoke: 'Chuck Norris once fetched a joke by roundhouse kicking a button.',

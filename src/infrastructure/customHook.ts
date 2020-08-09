@@ -8,6 +8,8 @@ const apiRoutes = {
   appendSearchString: '/search?query=',
 };
 
+
+// Custom Hook that handles the api request and connection to state management via dispatch
 export default function useFetchChuck(): [
   IState,
   (searchString: string) => void
@@ -26,6 +28,7 @@ export default function useFetchChuck(): [
   return [state, fetchChuck];
 }
 
+// Determines endpoint by weather a search string > 3 characters is provided
 function getRoute(searchString: string) {
   const { baseUrl, appendRandom, appendSearchString } = apiRoutes;
 
@@ -34,6 +37,8 @@ function getRoute(searchString: string) {
     (searchString.length > 3 ? appendSearchString + searchString : appendRandom)
   );
 }
+
+//Parses the received Joke out from the response data, handle difference random/search= endpoint
 function getJokeFromResponse(parsedData: IServerResult | IJoke) {
   if ('result' in parsedData) {
     const {result} = parsedData

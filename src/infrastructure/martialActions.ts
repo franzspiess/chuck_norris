@@ -4,6 +4,8 @@ export enum ActionTypes {
   ERROR = 'ERROR'
 }
 
+//Standard fetch actions
+
 export const fetchAction = (searchString?:string) : IAction  => ({
   type: ActionTypes.FETCHING,
   searchString
