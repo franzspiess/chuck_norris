@@ -17,7 +17,7 @@ describe('Testing the Chuck Norris App', () => {
     const initialMessage = 'Chuck Norris once fetched a joke by roundhouse kicking a button.'
     function getText() {
       return new Promise((res) =>
-        cy.get('#chuck-joke').then((el) => {
+        cy.get('.chuck-joke').then((el) => {
           res(el.text());
         })
       )

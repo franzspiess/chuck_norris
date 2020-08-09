@@ -25,9 +25,9 @@ export default function Search ({
           fetchChuck(searchString)
           setSearchString('')
         }}
-      >{ searchString.length ?
+      >{ searchString.length > 3 ?
         'SEARCH' :
-        'RANDOM JOKE'
+        'RANDOM FACT'
       }
         </button>
     </div>

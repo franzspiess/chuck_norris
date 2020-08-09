@@ -59,5 +59,12 @@ code {
   .box {
     color: white;
     background-image: url('./1118491.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
+  .chuck-joke {
+    background-color: black;
+    padding: 2%;
+    border-radius: 5px;
   }
 }
